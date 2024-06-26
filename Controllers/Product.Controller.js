@@ -6,10 +6,12 @@ const Product = require('../Models/Product.model');
 module.exports = {
   getAllProducts: async (req, res, next) => {
     try {
-      const results = await Product.find({}, { __v: 0 });
-      // const results = await Product.find({}, { name: 1, price: 1, _id: 0 });
-      // const results = await Product.find({ price: 699 }, {});
-      res.send(results);
+      // const results = await Product.find({}, { __v: 0 });
+      // // const results = await Product.find({}, { name: 1, price: 1, _id: 0 });
+      // // const results = await Product.find({ price: 699 }, {});
+      // res.send(results);
+      console.log('Get all products');
+      res.send('Get all products');
     } catch (error) {
       console.log(error.message);
     }
